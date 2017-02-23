@@ -50,6 +50,27 @@ class Obj extends Component {
 }
 
 
+
+class Li extends Component {
+    render() {
+        return (
+            <li onClick={() => {
+                this.props.clickHandle(this.props.index)
+            }} className={
+                this.props.details.completed ? "completed" : ""
+            }>
+                {
+                    this.props.details.name
+                }
+            </li>
+        );
+    }
+}
+
+
+
+
+
 ReactDOM.render(
     <Obj />,
     root
